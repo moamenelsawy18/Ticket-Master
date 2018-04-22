@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SearchFragment"
+    android:id="@+id/searchLayout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/searchTextLayout"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        >
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape"
+            android:hint="@string/search"
+            android:textColor="@color/ocean_blue"
+            android:textColorHint="@color/ocean_blue"
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/searchWordsLayout"
+        android:background="@color/pale_grey"
+        android:layout_below="@+id/searchTextLayout"
+        android:layout_marginTop="4dp"
+        >
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:id="@+id/searchImg"
+            android:src="@drawable/ic_search_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/ocean_blue"
+            android:layout_centerHorizontal="true"
+            android:text="@string/inputSearchWords"
+            android:id="@+id/searchHint"
+            android:layout_below="@+id/searchImg"
+            android:layout_marginTop="15dp"
+            />
+    </RelativeLayout>
+
+    <com.example.moamen.ticketmaster.utils.ScrollViewExt
+        android:id="@+id/scrollViewExt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/searchTextLayout"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchResultLayout"
+            android:visibility="gone"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchResultRecycler"
+                    >
+                </android.support.v7.widget.RecyclerView>
+
+            </ScrollView>
+        </RelativeLayout>
+    </com.example.moamen.ticketmaster.utils.ScrollViewExt>
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="true"
+    android:id="@+id/scrollView">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/detailsLayout"
+    >
+
+    <ImageView
+        android:id="@+id/eventImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/eventName"
+        android:textColor="@color/dark_grey_blue"
+        android:layout_below="@+id/eventImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="8sp"
+        android:layout_marginStart="16dp"
+        />
+
+    <TextView
+        android:textColor="@color/cool_grey"
+        android:layout_below="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentStart="true"
+        android:textSize="14sp"
+        android:id="@+id/eventDate"
+        />
+
+    <ImageView
+        android:id="@+id/addImage"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/eventDate"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/fav_artical"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addToMarked"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/addImage"
+        android:layout_marginStart="8dp"
+        android:text="@string/add_to_marked_events"
+        android:textSize="14sp"
+        android:textColor="@color/ocean_blue"
+        android:layout_below="@+id/eventDate"
+        />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cool_grey"
+        android:layout_below="@+id/addImage"
+        />
+
+    <TextView
+        android:textColor="@color/black2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textSize="14sp"
+        android:lineSpacingExtra="7sp"
+        android:id="@+id/eventInfo"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/line1"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cool_grey"
+        android:layout_below="@+id/eventInfo"
+        />
+
+    <TextView
+        android:textColor="@color/black2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3sp"
+        android:id="@+id/pleaseNote"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/line2"
+        />
+
+    <RelativeLayout
+        android:id="@+id/priceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pleaseNote"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        >
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/cool_grey"
+            />
+
+        <TextView
+            android:text="@string/price_ranges"
+            android:textColor="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:id="@+id/prices"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:textColor="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:id="@+id/priceType"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_below="@+id/prices"
+            />
+
+        <TextView
+            android:textColor="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:id="@+id/priceCurrency"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_below="@+id/priceType"
+            />
+
+        <TextView
+            android:textColor="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:id="@+id/minPrice"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_below="@+id/priceCurrency"
+            />
+
+        <TextView
+            android:textColor="@color/black2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            android:id="@+id/maxPrice"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_below="@+id/minPrice"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

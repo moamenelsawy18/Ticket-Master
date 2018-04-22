@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TicketMaster</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchEvent">Search For Event</string>
+    <string name="marked">Marked Events</string>
+    <string name="search">Search</string>
+    <string name="inputSearchWords">Please Enter The Search Words</string>
+    <string name="add_to_marked_events">Add To Marked Events</string>
+    <string name="added_to_marked_events">Added To Marked Events</string>
+    <string name="price_ranges">Price Ranges :</string>
+</resources>

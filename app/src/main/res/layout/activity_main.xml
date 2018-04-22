@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <View
+        android:id="@+id/lineSeprator1"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cool_grey"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/lineSeprator1"
+        android:id="@+id/fragmentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        >
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="start"
+        android:animationCache="false"
+        android:background="@color/pale_grey"
+        app:itemIconTint="@color/navigation_state"
+        app:itemTextColor="@color/navigation_state"
+        app:menu="@menu/bottom_bar_items" />
+
+</RelativeLayout>
