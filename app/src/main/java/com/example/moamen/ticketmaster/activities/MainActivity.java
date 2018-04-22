@@ -83,23 +83,28 @@ public class MainActivity extends AppCompatActivity implements Navigator{
 
     @OnClick(R.id.back)
     public void back(View view){
+        bottomNavigationView.setVisibility(View.VISIBLE);
         back.setVisibility(View.GONE);
         onBackPressed();
     }
 
     @Override
     public void onBackPressed() {
+        bottomNavigationView.setVisibility(View.VISIBLE);
+        back.setVisibility(View.GONE);
         super.onBackPressed();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        bottomNavigationView.setVisibility(View.VISIBLE);
         back.setVisibility(View.GONE);
     }
 
     @Override
     public void navigateTo(String view) {
+        bottomNavigationView.setVisibility(View.GONE);
         eventDetailsFragment = new EventDetailsFragment();
         editor.putBoolean("TwoPane" , twoPane);
         editor.commit();
